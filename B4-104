@@ -1,0 +1,64 @@
+Ejercicio 1 –comando file
+Comando usado desde la carpeta prueba.
+file ./prueba01/archivo01.txt -i
+Ejercicio 2 –comando stat
+Comandos usados desde la carpeta prueba.
+a) stat ./prueba01/archivo01.txt
+b) stat ./prueba02/prueba0202/archivo04.txt
+Ejercicio 3 –comandos stat y touch
+Comandos usados desde la carpeta prueba.
+a) stat ./prueba02/archivo02.txt
+b) touch ./prueba02/archivo02.txt
+oc) stat ./prueba02/archivo02.txt
+Ejercicio 4 –comando cat
+Comandos usados desde la carpeta prueba.
+a) cat ./prueba01/archivo01.txt
+b) cat ./prueba03/archivo03.txt
+Ejercicio 5 –comandos more y less
+Comandos usados desde la carpeta prueba.
+a) more ./prueba01/archivo01.txt
+b) less ./prueba01/archivo01.txt
+Ejercicio 6 –comando od
+Comandos usados desde la carpeta prueba.
+a) od ./prueba01/archivo01.txt
+b) od ./prueba01/archivo01.txt -x
+Ejercicio 7 –comando wc
+Comandos usados desde la carpeta prueba.
+a) wc -c -m -l ./prueba01/archivo01.txt
+b) wc -w ./prueba01/archivo01.txt
+Ejercicio 8 -comando find
+a) find / -name passwd
+b) sudo find / -name passwd
+//Al acceder como sudo ya tienes permiso para ver lo que antes te ponía acceso
+denegado.
+Comando usado desde la carpeta prueba
+c) find ./ -name archivo*
+d) sudo find / -user usuario1 -and -name *.txt
+e) find \ -name "*txt" -user "usuario01" -ok rm {} \;
+//y = borrar , n = no borrar
+f) find \ -name "*txt" -user "usuario01" -exec ls -ldi {} \; > txt_archEjercicio 9 –comando grep
+a) Sigue los siguientes pasos:
+a1) ps -ef
+a2) PID: 12453
+a3) ps -ef | grep 12453
+b) grep dam1-2 /etc/passwd
+c) grep -lr "prueba" ./
+d) ps -ef | grep $USER
+Ejercicio 10 –comando cut
+a) cat /etc/passwd | grep $USER | cut -f 1,6,7 -d ‘:’
+Desde la carpeta prueba accedo al fichero “archivo03.txt” de donde lo he creado yo al
+principio de la práctica.
+b) cat ./prueba03/archivo03.txt |cut -d ‘#’ -f 2,3,5
+Ejercicio 11 –comando sort
+a) cat ./prueba03/archivo03.txt
+Comando usado desde la carpeta prueba
+a1) cat ./prueba03/archivo03.txt | cut -d "#" -f 2,3 --output-delimiter ‘,’ >
+./empleados.txt
+a2) less ./empleados.txt
+a3) cat ./empleados | sort -k 1 -t "#"> ./lista_emp.txt
+a4) cat ./lista_emp.txt
+b) cat /etc/passwd | sort -k 1 -t ":"
+Ejercicio 12 –comandos head y tail
+a) cat /etc/passwd | grep $USER | cut -f 6,7 -d ":"
+tail: tail /etc/passwd -n 3
+head: head /etc/passwd -n 3
